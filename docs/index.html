@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Agent Workbench — Multi-Model Code Factory</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#0a0a0f;color:#e0e0e0;font-family:-apple-system,BlinkMacSystemFont,'SF Mono',Menlo,monospace;min-height:100vh;display:flex;align-items:center;justify-content:center}
+.bg{position:fixed;inset:0;background-image:linear-gradient(rgba(255,255,255,.02) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.02) 1px,transparent 1px);background-size:40px 40px;pointer-events:none}
+.card{text-align:center;padding:60px 40px;max-width:700px;z-index:1}
+h1{font-size:36px;background:linear-gradient(135deg,#06b6d4,#a855f7,#f59e0b);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:16px}
+.subtitle{color:#666;font-size:16px;margin-bottom:32px;line-height:1.6}
+.pipeline{display:flex;gap:16px;justify-content:center;margin-bottom:40px}
+.stage{background:#12121f;border:1px solid #1e1e3a;border-radius:12px;padding:20px 24px;text-align:center}
+.stage .icon{font-size:28px;display:block;margin-bottom:8px}
+.stage .name{font-size:12px;color:#777;text-transform:uppercase;letter-spacing:2px}
+.arrow{color:#444;font-size:24px;align-self:center}
+.links{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.btn{display:inline-block;padding:14px 28px;border-radius:10px;font-size:14px;font-weight:700;text-decoration:none;transition:all .2s;letter-spacing:.5px}
+.btn-primary{background:linear-gradient(135deg,#06b6d4,#8b5cf6);color:#fff}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(6,182,212,.35)}
+.btn-ghost{border:1px solid #2a2a4a;color:#888}
+.btn-ghost:hover{border-color:#06b6d4;color:#06b6d4}
+.features{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:48px;text-align:left}
+.feat{padding:20px;background:#12121f;border:1px solid #1e1e3a;border-radius:12px}
+.feat h3{font-size:14px;color:#06b6d4;margin-bottom:8px}
+.feat p{font-size:13px;color:#666;line-height:1.5}
+@media(max-width:640px){.pipeline{flex-direction:column;align-items:center}.arrow{transform:rotate(90deg)}.features{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="bg"></div>
+<div class="card">
+<h1>AGENT WORKBENCH</h1>
+<p class="subtitle">多模型协作编码管线 — Architect 设计 → Coder 实现 → Reviewer 审查 → 自动修复循环<br>通过 DeepSeek V4 Pro 驱动，47 秒一站式完成</p>
+<div class="pipeline">
+<div class="stage"><span class="icon">🧠</span><div class="name">Architect</div></div>
+<div class="arrow">→</div>
+<div class="stage"><span class="icon">✍️</span><div class="name">Coder</div></div>
+<div class="arrow">→</div>
+<div class="stage"><span class="icon">🔍</span><div class="name">Reviewer</div></div>
+</div>
+<div class="links">
+<a class="btn btn-primary" href="https://github.com/kangjinronglove-ui/agent-workbench" target="_blank">📦 GitHub 源码</a>
+<a class="btn btn-ghost" href="#" onclick="alert('演示服务需要本地运行。\\n\\n克隆仓库后执行:\\nnode server-demo.js --fast\\n\\n浏览器打开 http://localhost:3030')">▶ 本地运行 Demo</a>
+</div>
+<div class="features">
+<div class="feat"><h3>🔗 多 Provider 路由</h3><p>支持 DeepSeek / MiMo / Xiaomi 热切换，一个环境变量即可</p></div>
+<div class="feat"><h3>🧵 推理链可视化</h3><p>实时流出 AI 思考过程，不是黑盒输出</p></div>
+<div class="feat"><h3>🔄 自动纠错循环</h3><p>Reviewer 挑刺 → Coder 修复 → 再审查 → 直到通过</p></div>
+</div>
+</div>
+</body>
+</html>
